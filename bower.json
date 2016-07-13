@@ -1,0 +1,24 @@
+{
+  "name": "MRM-React",
+  "version": "0.0.0",
+  "authors": [
+    "antbrooksuk <antbrooksuk@gmail.com>"
+  ],
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.1.1",
+    "react": "~15.2.1",
+    "slick-carousel": "~1.6.0"
+  }
+}
