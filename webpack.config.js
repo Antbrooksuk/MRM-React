@@ -11,7 +11,7 @@ var PATHS = {
     images: path.join(__dirname, 'src/images')
 };
 
-module.exports = {
+var config = {
     context: __dirname,
     debug: true,
     devtool: "inline-source-map",
@@ -24,7 +24,7 @@ module.exports = {
         publicPath: "/"
     },
     resolve: {
-        alias: {}
+        alias: { }
     },
     module: {
         noParse: [],
@@ -60,3 +60,5 @@ module.exports = {
         })
     ]
 };
+
+module.exports = config;
