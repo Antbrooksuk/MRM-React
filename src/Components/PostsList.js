@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Post from "./Post"
 
-export default class PostList extends Component {
+class PostList extends Component {
 	render() {
 		if(Object.getOwnPropertyNames(this.props.posts).length === 0) {
 			return (
@@ -18,8 +18,9 @@ export default class PostList extends Component {
 		return (
 			<div>
 				<h2>Posts by {this.props.name}</h2>
-				{postNodes}
+				<ul>{postNodes}</ul>
 			</div>
 		)
 	}
 }
+export default PostList

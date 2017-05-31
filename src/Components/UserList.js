@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import UserLink from "./UserLink"
 
-export default class UserList extends Component {
+class UserList extends Component {
 	render() {
 		if(Object.getOwnPropertyNames(this.props.users).length === 0) {
 			return (
@@ -17,8 +17,9 @@ export default class UserList extends Component {
 		})
 		return (
 			<div>
-				{userNodes}
+				<ul>{userNodes}</ul>
 			</div>
 		)
 	}
 }
+export default UserList

@@ -21,6 +21,7 @@ class Users extends Component {
 			<div className="users">
 				<h1>User list</h1>
 				<UserList users={this.props.users} />
+				<a href="/">&larr; Home</a>
 			</div>
 		)
 	}

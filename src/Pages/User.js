@@ -17,8 +17,10 @@ class User extends Component {
 	render() {
 		return (
 			<div className="user">
+				<h1>User details</h1>
 				<UserDetails name={this.props.user.name} email={this.props.user.email} id={this.props.user.id} />
 				<PostList posts={this.props.posts} name={this.props.user.name} />
+				<a href="/users">&larr; Users</a>
 			</div>
 		)
 	}

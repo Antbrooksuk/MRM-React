@@ -1,4 +1,4 @@
-export default function users (state = {
+export function users (state = {
 	error: null,
 	users: []
 }, action){
@@ -45,3 +45,5 @@ export function posts (state = {
 	}
 	return state
 }
+
+export default users
