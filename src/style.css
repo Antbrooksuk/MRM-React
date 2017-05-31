@@ -10,3 +10,29 @@ body {
 a {
 	color:#fff;
 }
+
+h1,h2,h3,h4,p {
+	margin:0 0 1em;
+}
+
+.layout {
+	margin:0 auto;
+	max-width:40em;
+}
+
+.user_posts, .user_list {
+	border:1px solid #111;
+	padding:1em;
+	margin:1em 0;
+	background:#eee;
+	color:#000;
+}
+
+.user_list li a {
+	color:#000;
+}
+
+.loading {
+	text-align: center;
+	padding:1em 0;
+}

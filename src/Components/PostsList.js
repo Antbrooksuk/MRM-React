@@ -1,12 +1,32 @@
 import React, { Component } from "react"
 import Post from "./Post"
+import {connect} from "react-redux"
+import {fetchUserPosts, clearUserPosts} from "../Actions/userActions"
 
 class PostList extends Component {
+
+	getPosts() {
+		this.props.dispatch(fetchUserPosts({ id: this.props.id }))
+	}
+
+	clearPosts() {
+		this.props.dispatch(clearUserPosts({ id: this.props.id }))
+	}
+
 	render() {
-		if(Object.getOwnPropertyNames(this.props.posts).length === 0) {
+		if(!this.props.posts || this.props.fetching) {
 			return (
-				<div>
-					None
+				<div className="user_posts">
+					<div className="loading">
+						Loading ...
+					</div>
+				</div>
+			)
+		} else if(this.props.posts.length === 0) {
+			return (
+				<div className="user_posts">
+					<h4>Posts by {this.props.name}</h4>
+					<button onClick={this.getPosts.bind(this)}>Get This Users Posts</button>
 				</div>
 			)
 		}
@@ -16,11 +36,22 @@ class PostList extends Component {
 			)
 		})
 		return (
-			<div>
-				<h2>Posts by {this.props.name}</h2>
+			<div className="user_posts">
+				<h4>Posts by {this.props.name}</h4>
 				<ul>{postNodes}</ul>
+				<button onClick={this.clearPosts.bind(this)}>Clear Posts</button>
 			</div>
 		)
 	}
 }
-export default PostList
+
+const mapDispatchToProps = (dispatch) => ({
+	dispatch: dispatch
+})
+
+const mapStateToProps = (store) => ({
+	posts: store.posts.posts,
+	fetching: store.posts.fetching
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(PostList)
