@@ -1,0 +1,12 @@
+body {
+	margin: 0;
+	padding: 2em;
+	font-family: sans-serif;
+	background:#333;
+	color:#fff;
+	font-size:100%;
+}
+
+a {
+	color:#fff;
+}

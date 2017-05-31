@@ -1,10 +1,13 @@
-MRM React
-=========
+This project goes with the [ReactJS Crash Course](https://www.youtube.com/watch?v=A71aqufiNtQ) YouTube video
 
-### How to use
+## ReactJS Project Manager
 
-- `npm install`
-- `bower install`
-- `npm run dev` - localhost:8080
-- `npm run deploy` - deploy to dist folder
+Very simple project manager interface using React
 
+```sh
+$ npm install
+```
+
+```sh
+$ npm start
+```
