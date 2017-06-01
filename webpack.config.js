@@ -1,8 +1,17 @@
+var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   plugins: [
-    new webpack.NoErrorsPlugin()
+    new ExtractTextPlugin("bundle.css"),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.bundle\.css$/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorOptions: { discardComments: {removeAll: true } },
+      canPrint: true
+    })
   ],
   module: {
     loaders: [
@@ -15,9 +24,14 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        loaders: ['style', 'css', 'sass']
+          test: /\.css$/,
+          exclude: /node_modules/,
+          loader: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" })
+      },
+      {
+          test: /\.scss$/,
+          exclude: /node_modules/,
+          loader: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader!sass-loader" })
       }
     ]
   },
