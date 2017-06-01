@@ -7,8 +7,18 @@ class UserList extends Component {
 		if(!this.props.users) {
 			return (
 				<div className="user_list">
-					<div class="loading">
-						Loading ...
+					<div className="preloader-wrapper small active">
+						<div className="spinner-layer spinner-green-only">
+							<div className="circle-clipper left">
+								<div className="circle"></div>
+							</div>
+							<div className="gap-patch">
+								<div className="circle"></div>
+							</div>
+							<div className="circle-clipper right">
+								<div className="circle"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			)
@@ -26,8 +36,10 @@ class UserList extends Component {
 		})
 		return (
 			<div className="user_list">
-				<ul>{userNodes}</ul>
-				<button onClick={this.props.onRefresh}>Refresh users</button>
+				<ul className="collection">
+					{userNodes}
+				</ul>
+				<button className="btn" onClick={this.props.onRefresh}>Refresh users</button>
 			</div>
 		)
 	}

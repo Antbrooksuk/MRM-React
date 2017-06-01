@@ -1,12 +1,12 @@
 import React from "react"
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 // Import Layouts
-import Main from "./Layouts/Main"
+import Main from "./layouts/Main"
 // Import Pages
-import Home from "./Pages/Home"
-import Users from "./Pages/Users"
-import User from "./Pages/User"
-import NotFound from "./Pages/NotFound"
+import Home from "./pages/Home"
+import Users from "./pages/Users"
+import User from "./pages/User"
+import NotFound from "./pages/NotFound"
 // Create router with access to store
 const AppRouter = store => {
 	return (

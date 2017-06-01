@@ -11,7 +11,7 @@ export function fetchUsers(){
 				.catch((err) => {
 					dispatch({ type: "FETCH_USERS_REJECTED", payload: err })
 				})
-		}, 2000)
+		}, 1000)
 	}
 }
 
@@ -26,7 +26,7 @@ export function fetchUser(params){
 				.catch((err) => {
 					dispatch({ type: "FETCH_USER_REJECTED", payload: err })
 				})
-		}, 2000)
+		}, 1000)
 	}
 }
 
@@ -41,7 +41,7 @@ export function fetchUserPosts(params){
 				.catch((err) => {
 					dispatch({ type: "FETCH_USER_POSTS_REJECTED", payload: err })
 				})
-		}, 2000)
+		}, 1000)
 	}
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Post from "./Post"
 import {connect} from "react-redux"
-import {fetchUserPosts, clearUserPosts} from "../Actions/userActions"
+import {fetchUserPosts, clearUserPosts} from "../actions"
 
 class PostList extends Component {
 
@@ -17,8 +17,19 @@ class PostList extends Component {
 		if(!this.props.posts || this.props.fetching) {
 			return (
 				<div className="user_posts">
-					<div className="loading">
-						Loading ...
+					<h4>Posts by {this.props.name}</h4>
+					<div className="preloader-wrapper small active">
+						<div className="spinner-layer spinner-green-only">
+							<div className="circle-clipper left">
+								<div className="circle"></div>
+							</div>
+							<div className="gap-patch">
+								<div className="circle"></div>
+							</div>
+							<div className="circle-clipper right">
+								<div className="circle"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			)
@@ -26,7 +37,7 @@ class PostList extends Component {
 			return (
 				<div className="user_posts">
 					<h4>Posts by {this.props.name}</h4>
-					<button onClick={this.getPosts.bind(this)}>Get This Users Posts</button>
+					<button className="btn" onClick={this.getPosts.bind(this)}>Get This Users Posts</button>
 				</div>
 			)
 		}
@@ -38,8 +49,10 @@ class PostList extends Component {
 		return (
 			<div className="user_posts">
 				<h4>Posts by {this.props.name}</h4>
-				<ul>{postNodes}</ul>
-				<button onClick={this.clearPosts.bind(this)}>Clear Posts</button>
+				<ul className="collection">
+					{postNodes}
+				</ul>
+				<button className="btn" onClick={this.clearPosts.bind(this)}>Clear Posts</button>
 			</div>
 		)
 	}
