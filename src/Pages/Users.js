@@ -64,7 +64,7 @@ class Users extends Component {
 			<div className="users">
 				<div className="row">
 					<div className="col s12">
-						<h1>User list</h1>
+						<h1>User List</h1>
 						<UserList users={this.props.users} onRefresh={this.refreshUsers.bind(this)} />
 					</div>
 				</div>

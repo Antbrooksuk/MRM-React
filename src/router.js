@@ -1,5 +1,5 @@
 import React from "react"
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 // Import Layouts
 import Main from "./layouts/Main"
 // Import Pages
@@ -22,4 +22,4 @@ const AppRouter = store => {
 	    </Router>
 	)
 }
-export default AppRouter;
+export default AppRouter
