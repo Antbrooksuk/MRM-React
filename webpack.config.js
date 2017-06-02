@@ -34,7 +34,6 @@ module.exports = {
 		//new webpack.optimize.UglifyJsPlugin(), //minify everything
 		//new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks 
 
-		new ExtractTextPlugin("bundle.css"),
 		new OptimizeCssAssetsPlugin({
 			assetNameRegExp: /\.bundle\.css$/g,
 			cssProcessor: require('cssnano'),
@@ -55,12 +54,12 @@ module.exports = {
 			{
 				test: /\.css$/,
 				exclude: /node_modules/,
-				loader: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" })
+				loaders: ["style-loader", "css-loader"]
 			},
 			{
 				test: /\.scss$/,
 				exclude: /node_modules/,
-				loader: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader!sass-loader" })
+				loaders: ["style-loader", "css-loader", "sass-loader"]
 			}
 		]
 	},

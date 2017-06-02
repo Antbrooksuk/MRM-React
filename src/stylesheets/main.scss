@@ -2,20 +2,20 @@
 
 // Mixins
 // @import "components/prefixer";
-@import "components/mixins";
-@import "components/color";
+@import "base/mixins";
+@import "base/color";
 
 // Variables;
-@import "components/variables";
+@import "base/variables";
 
 // Reset
-@import "components/normalize";
+@import "base/normalize";
 
 // components
-@import "components/global";
-@import "components/roboto";
-@import "components/typography";  
-@import "components/grid";
+@import "base/global";
+@import "base/roboto";
+@import "base/typography";  
+@import "base/grid";
 @import "components/buttons";
 @import "components/preloader"; 
 
@@ -29,4 +29,9 @@ header {
 
 footer {
 	border-top: 1px solid #ccc;
+}
+
+.map {
+	height:30em;
+	margin:0 0 1.5em;
 }

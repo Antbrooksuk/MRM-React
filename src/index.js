@@ -14,8 +14,8 @@ const render = Component =>
 render(App);
 
 if (module.hot) {
-  module.hot.accept('./app', () => {
-    const NextApp = require('./app').default
-    render(NextApp)
-  })
+  	module.hot.accept('./app', () => {
+    	const NextApp = require('./app').default
+    	render(NextApp)
+  	})
 }

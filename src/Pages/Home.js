@@ -11,6 +11,7 @@ class Home extends Component {
 						<ul className="collection">
 							<li className="collection-item"><Link to='/users'>Users</Link></li>
 							<li className="collection-item"><Link to='/form'>Form</Link></li>
+							<li className="collection-item"><Link to='/map'>Map</Link></li>
 						</ul>
 					</div>
 				</div>
@@ -19,15 +20,7 @@ class Home extends Component {
 						<h2>React components to check out</h2>
 						<ul className="collection">
 							<li className="collection-item"><a target="_blank" href='https://github.com/loktar00/react-lazy-load'>Lazy Load</a></li>
-							<li className="collection-item"><a target="_blank" href='https://github.com/gatsbyjs/gatsby'>SSG Gatsby</a></li>
-							<li className="collection-item"><a target="_blank" href='https://github.com/MoOx/phenomic'>SSG Phenomic</a></li>
-							<li className="collection-item"><a target="_blank" href='https://github.com/andreypopp/sitegen'>SSG Sitegen</a></li>
-							<li className="collection-item"><a target="_blank" href='https://github.com/Lucifier129/react-lite'>React Lite</a></li>
-							<li className="collection-item"><a target="_blank" href='https://github.com/redsunsoft/react-render-visualizer'>React Render Visualizer</a></li>
-							<li className="collection-item"><a target="_blank" href='https://github.com/gaearon/redux-devtools'>Redux Devtools</a></li>
-							<li className="collection-item"><a target="_blank" href='https://github.com/styleguidist/react-styleguidist'>React Styleguidist</a></li>
 							<li className="collection-item"><a target="_blank" href='https://github.com/akiran/react-slick'>React Slick</a></li>
-							<li className="collection-item"><a target="_blank" href='https://github.com/istarkov/google-map-react'>Google maps</a></li>
 							<li className="collection-item"><a target="_blank" href='https://github.com/hzdg/react-google-analytics'>Google analytics</a></li>
 							<li className="collection-item"><a target="_blank" href='https://github.com/gorangajic/react-icons'>Icons</a></li>
 						</ul>
