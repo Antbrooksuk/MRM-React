@@ -16,6 +16,9 @@
 @import "base/roboto";
 @import "base/typography";  
 @import "base/grid";
+@import "components/tabs";
+@import "components/navbar";
+@import "components/sidenav";
 @import "components/buttons";
 @import "components/preloader"; 
 @import 'components/input-fields';
@@ -27,18 +30,13 @@
 @import 'components/range';
 
 
-header, footer, main {
+footer, main {
 	padding:1.5em 0 0.5em;
 	background:#fff;
 }
 
 header {
-	background:#333;
-	color:#fff;
-	a {
-		text-decoration: underline;
-		color:#fff;
-	}
+	
 }
 
 footer {

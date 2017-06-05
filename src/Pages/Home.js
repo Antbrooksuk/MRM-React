@@ -8,16 +8,11 @@ class Home extends Component {
 				<div className="row">
 					<div className="col s12">
 						<h1>App Home</h1>
-						<ul className="collection">
-							<li className="collection-item"><Link to='/users'>Users</Link></li>
-							<li className="collection-item"><Link to='/form'>Form</Link></li>
-							<li className="collection-item"><Link to='/map'>Map</Link></li>
-						</ul>
 					</div>
 				</div>
 				<div className="row">
 					<div className="col s12">
-						<h2>React components to check out</h2>
+						<h4>React components to check out</h4>
 						<ul className="collection">
 							<li className="collection-item"><a target="_blank" href='https://github.com/akiran/react-slick'>React Slick</a></li>
 							<li className="collection-item"><a target="_blank" href='https://github.com/hzdg/react-google-analytics'>Google analytics</a></li>
