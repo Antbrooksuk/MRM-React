@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {withRouter} from 'react-router'
+import { Link } from 'react-router-dom'
 
 class Main extends Component {
 	render() {
@@ -9,7 +10,7 @@ class Main extends Component {
 					<div className="container">
 						<div className="row">
 							<div className="col s12">
-								MRM React
+								<Link to='/'>MRM React</Link>
 							</div>
 						</div>
 					</div>

@@ -62,7 +62,6 @@ class CustomForm extends React.Component {
 					<div className="input-field col s12">
 						<input 
 							autoFocus 
-							placeholder="Name:" 
 							name="name" 
 							className="validate" 
 							type="text" 
@@ -88,40 +87,38 @@ class CustomForm extends React.Component {
 					</div>
 				</div>
 				<div className="row">
-					<div className="col s12">
-						<div className="input-field inline">
-							<input 
-								name="type" 
-								type="radio" 
-								id="type-red" 
-								onChange={this.handleInputChange.bind(this, "type")} 
-								onFocus={this.handleOnFocus.bind(this, "type")} 
-								onBlur={this.handleOnBlur.bind(this, "type")}
-							/>
-							<label htmlFor="type-red">Red</label>
-						</div>
-						<div className="input-field inline">
-							<input 
-								name="type" 
-								type="radio" 
-								id="type-blue" 
-								onChange={this.handleInputChange.bind(this, "type")} 
-								onFocus={this.handleOnFocus.bind(this, "type")} 
-								onBlur={this.handleOnBlur.bind(this, "type")}
-							/>
-							<label htmlFor="type-blue">Blue</label>
-						</div>
-						<div className="input-field inline">
-							<input 
-								name="type" 
-								type="radio" 
-								id="type-yellow" 
-								onChange={this.handleInputChange.bind(this, "type")} 
-								onFocus={this.handleOnFocus.bind(this, "type")} 
-								onBlur={this.handleOnBlur.bind(this, "type")}
-							/>
-							<label htmlFor="type-yellow">Yellow</label>
-						</div>
+					<div className="input-field col s12 m3">
+						<input 
+							name="type" 
+							type="radio" 
+							id="type-red" 
+							onChange={this.handleInputChange.bind(this, "type")} 
+							onFocus={this.handleOnFocus.bind(this, "type")} 
+							onBlur={this.handleOnBlur.bind(this, "type")}
+						/>
+						<label htmlFor="type-red">Red</label>
+					</div> 
+					<div className="input-field col s12 m3">
+						<input 
+							name="type" 
+							type="radio" 
+							id="type-blue" 
+							onChange={this.handleInputChange.bind(this, "type")} 
+							onFocus={this.handleOnFocus.bind(this, "type")} 
+							onBlur={this.handleOnBlur.bind(this, "type")}
+						/>
+						<label htmlFor="type-blue">Blue</label>
+					</div> 
+					<div className="input-field col s12 m3">
+						<input 
+							name="type" 
+							type="radio" 
+							id="type-yellow" 
+							onChange={this.handleInputChange.bind(this, "type")} 
+							onFocus={this.handleOnFocus.bind(this, "type")} 
+							onBlur={this.handleOnBlur.bind(this, "type")}
+						/>
+						<label htmlFor="type-yellow">Yellow</label>
 					</div>
 				</div>
 				<div className="row">
@@ -143,11 +140,6 @@ class CustomForm extends React.Component {
 				<div className="row">
 					<div className="input-field col s12">
 						<input className="btn" type="submit" value="Submit" />
-					</div>
-				</div>
-				<div className="row">
-					<div className="col s12">
-						<Link to='/'>&larr; Home</Link>
 					</div>
 				</div>
 			</form>

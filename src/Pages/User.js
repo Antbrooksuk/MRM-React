@@ -33,11 +33,6 @@ class User extends Component {
 							</div>
 						</div>
 					</div>
-					<div className="row">
-						<div className="col s12">
-							<Link to='/users'>&larr; Users</Link>
-						</div>
-					</div>
 				</div>
 			)
 		} else if(this.props.user.length === 0) {
@@ -47,11 +42,6 @@ class User extends Component {
 						<div className="col s12">
 							<h1>User details</h1>
 							<p>None found</p>
-						</div>
-					</div>
-					<div className="row">
-						<div className="col s12">
-							<Link to='/users'>&larr; Users</Link>
 						</div>
 					</div>
 				</div>
@@ -65,11 +55,6 @@ class User extends Component {
 						<UserDetails name={this.props.user.name} email={this.props.user.email} id={this.props.user.id} />
 						<h4>Posts by {this.props.user.name}</h4>
 						<PostList name={this.props.user.name} id={this.props.user.id} />
-					</div>
-				</div>
-				<div className="row">
-					<div className="col s12">
-						<Link to='/users'>&larr; Users</Link>
 					</div>
 				</div>
 			</div>

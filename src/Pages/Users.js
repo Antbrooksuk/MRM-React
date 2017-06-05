@@ -36,11 +36,6 @@ class Users extends Component {
 							</div>
 						</div>
 					</div>
-					<div className="row">
-						<div className="col s12">
-							<Link to='/'>&larr; Home</Link>
-						</div>
-					</div>
 				</div>
 			)
 		} else if(this.props.users.length === 0) {
@@ -52,11 +47,6 @@ class Users extends Component {
 							<p>None found</p>
 						</div>
 					</div>
-					<div className="row">
-						<div className="col s12">
-							<Link to='/'>&larr; Home</Link>
-						</div>
-					</div>
 				</div>
 			)
 		}
@@ -66,11 +56,6 @@ class Users extends Component {
 					<div className="col s12">
 						<h1>User List</h1>
 						<UserList users={this.props.users} onRefresh={this.refreshUsers.bind(this)} />
-					</div>
-				</div>
-				<div className="row">
-					<div className="col s12">
-						<Link to='/'>&larr; Home</Link>
 					</div>
 				</div>
 			</div>

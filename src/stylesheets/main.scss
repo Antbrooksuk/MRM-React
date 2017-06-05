@@ -18,6 +18,32 @@
 @import "base/grid";
 @import "components/buttons";
 @import "components/preloader"; 
+@import 'components/input-fields';
+@import 'components/radio-buttons';
+@import 'components/checkboxes';
+@import 'components/switches';
+@import 'components/select';
+@import 'components/file-input';
+@import 'components/range';
+
+
+header, footer, main {
+	padding:1.5em 0 0.5em;
+	background:#fff;
+}
+
+header {
+	background:#333;
+	color:#fff;
+	a {
+		text-decoration: underline;
+		color:#fff;
+	}
+}
+
+footer {
+	background:#f4f4f4;
+}
 
 // Remove Focus Boxes
 select:focus {
@@ -34,27 +60,6 @@ label {
   color: $input-border-color;
 }
 
-@import 'components/input-fields';
-@import 'components/radio-buttons';
-@import 'components/checkboxes';
-@import 'components/switches';
-@import 'components/select';
-@import 'components/file-input';
-@import 'components/range';
-
-
-header, footer, main {
-	padding:2em 0 1em;
-}
-
-header {
-	border-bottom: 1px solid #ccc;
-}
-
-footer {
-	border-top: 1px solid #ccc;
-}
-
 .map {
 	height:30em;
 	margin:0 0 1.5em;
@@ -67,4 +72,19 @@ footer {
 		display: block;
 		max-width:100%;
 	}
+}
+
+.marker {
+	position: absolute;
+    width: 100px;
+    height: 60px;
+    left: -50px;
+    top: -30px;
+    border: 5px solid #f44336;
+    background-color: white;
+    text-align: center;
+    color: #3f51b5;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 4px;
 }

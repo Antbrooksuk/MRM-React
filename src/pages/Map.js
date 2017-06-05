@@ -2,12 +2,12 @@ import React, { Component } from "react"
 import { Link } from 'react-router-dom'
 import GoogleMapReact from 'google-map-react';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>
+const AnyReactComponent = ({ text }) => <div className="marker">{text}</div>
 
 class Map extends Component {
 
 	static defaultProps = {
-		center: {lat: 59.95, lng: 30.33},
+		center: {lat: 51.505236, lng: -0.096760},
 		zoom: 11
 	}
 
@@ -19,10 +19,9 @@ class Map extends Component {
 						<h1>Map</h1>
 						<div className="map">
 							<GoogleMapReact defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
-								<AnyReactComponent lat={59.955413} lng={30.337844} text={'Kreyser Avrora'} />
+								<AnyReactComponent lat={51.505236} lng={-0.096760} text={'MRM Meteorite'} />
 							</GoogleMapReact>
 						</div>
-						<Link to='/'>&larr; Home</Link>
 					</div>
 				</div>
 			</div>

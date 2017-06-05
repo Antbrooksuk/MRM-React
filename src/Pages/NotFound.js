@@ -9,7 +9,6 @@ class NotFound extends Component {
 					<div className="col s12">
 						<h1>404</h1>
 						<p>Not Found</p>
-						<Link to='/'>&larr; Home</Link>
 					</div>
 				</div>
 			</div>
