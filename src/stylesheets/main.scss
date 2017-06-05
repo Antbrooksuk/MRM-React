@@ -19,6 +19,30 @@
 @import "components/buttons";
 @import "components/preloader"; 
 
+// Remove Focus Boxes
+select:focus {
+  outline: $select-focus;
+}
+
+button:focus {
+  outline: none;
+  background-color: $button-background-focus;
+}
+
+label {
+  font-size: $label-font-size;
+  color: $input-border-color;
+}
+
+@import 'components/input-fields';
+@import 'components/radio-buttons';
+@import 'components/checkboxes';
+@import 'components/switches';
+@import 'components/select';
+@import 'components/file-input';
+@import 'components/range';
+
+
 header, footer, main {
 	padding:2em 0 1em;
 }
@@ -34,4 +58,13 @@ footer {
 .map {
 	height:30em;
 	margin:0 0 1.5em;
+}
+
+.LazyLoad {
+	display: block;
+	margin: 0 0 1.5em;
+	img {
+		display: block;
+		max-width:100%;
+	}
 }

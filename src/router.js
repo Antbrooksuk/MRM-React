@@ -6,6 +6,7 @@ import Main from "./layouts/Main"
 import Home from "./pages/Home"
 import Map from "./pages/Map"
 import Users from "./pages/Users"
+import CustomForm from "./pages/Form"
 import User from "./pages/User"
 import NotFound from "./pages/NotFound"
 // Create router with access to store
@@ -17,6 +18,7 @@ const AppRouter = store => {
 	                <Route exact path="/" component={Home} />
 	                <Route exact path="/map" component={Map} />
 	                <Route exact path="/users" component={Users} />
+	                <Route exact path="/form" component={CustomForm} />
                     <Route exact path="/user/:id" component={User} />
                     <Route path="*" component={NotFound} />
 	            </Switch>

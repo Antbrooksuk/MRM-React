@@ -19,7 +19,6 @@ class Home extends Component {
 					<div className="col s12">
 						<h2>React components to check out</h2>
 						<ul className="collection">
-							<li className="collection-item"><a target="_blank" href='https://github.com/loktar00/react-lazy-load'>Lazy Load</a></li>
 							<li className="collection-item"><a target="_blank" href='https://github.com/akiran/react-slick'>React Slick</a></li>
 							<li className="collection-item"><a target="_blank" href='https://github.com/hzdg/react-google-analytics'>Google analytics</a></li>
 							<li className="collection-item"><a target="_blank" href='https://github.com/gorangajic/react-icons'>Icons</a></li>
