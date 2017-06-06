@@ -21,25 +21,9 @@ module.exports = {
 	devtool: 'inline-source-map',
 
 	plugins: [
-
 		new webpack.HotModuleReplacementPlugin(),
 	    new webpack.NamedModulesPlugin(),
 	    new webpack.NoEmitOnErrorsPlugin(),
-
-		/*new webpack.DefinePlugin({ // <-- key to reducing React's size
-			'process.env': {
-				'NODE_ENV': JSON.stringify('production')
-			}
-		}),*/
-		//new webpack.optimize.UglifyJsPlugin(), //minify everything
-		//new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks 
-
-		new OptimizeCssAssetsPlugin({
-			assetNameRegExp: /\.bundle\.css$/g,
-			cssProcessor: require('cssnano'),
-			cssProcessorOptions: { discardComments: {removeAll: true } },
-			canPrint: true
-		})
 	],
 	module: {
 		loaders: [
