@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Main from "./layouts/Main"
 // Import Pages
 import Home from "./pages/Home"
-import Map from "./pages/Map"
+import Contact from "./pages/Contact"
 import Article from "./pages/Article"
 import Users from "./pages/Users"
 import CustomForm from "./pages/Form"
@@ -17,7 +17,7 @@ const AppRouter = store => {
 			<Main>
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route exact path="/map" component={Map} />
+					<Route exact path="/contact" component={Contact} />
 					<Route exact path="/users" component={Users} />
 					<Route exact path="/article/:id" component={Article} />
 					<Route exact path="/form" component={CustomForm} />

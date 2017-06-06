@@ -16,7 +16,7 @@ class Main extends Component {
 									<ul id="nav-mobile" className="right">
 										<li className={(active === "users" || active === "user") ? "active": ""}><Link to='/users'>Users</Link></li>
 										<li className={(active === "form") ? "active": ""}><Link to='/form'>Form</Link></li>
-										<li className={(active === "map") ? "active": ""}><Link to='/map'>Map</Link></li>
+										<li className={(active === "contact") ? "active": ""}><Link to='/contact'>Contact</Link></li>
 										<li className={(active === "article") ? "active": ""}><Link to='/article/asd'>Article</Link></li>
 									</ul>
 								</div>
