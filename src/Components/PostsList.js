@@ -1,9 +1,11 @@
 import React, { Component } from "react"
+import PropTypes from 'prop-types'
 import Post from "./Post"
 import Preloader from "./Preloader"
 import {connect} from "react-redux"
 import {fetchUserPosts, clearUserPosts} from "../actions"
 
+// List of user posts
 class PostList extends Component {
 
 	constructor(props, context) {
@@ -70,5 +72,10 @@ const mapStateToProps = (store) => ({
 	posts: store.posts.posts,
 	fetching: store.posts.fetching
 })
+
+PostList.propTypes = {
+	fetching: PropTypes.bool.isRequired,
+	posts: PropTypes.array.isRequired
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostList)

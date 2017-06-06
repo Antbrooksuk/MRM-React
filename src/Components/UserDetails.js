@@ -1,5 +1,7 @@
 import React, { Component } from "react"
+import PropTypes from 'prop-types'
 
+// Return the user details
 class User extends Component {
 	render() {
 		return (
@@ -9,4 +11,10 @@ class User extends Component {
 		)
 	}
 }
+
+User.propTypes = {
+	name: PropTypes.string.isRequired,
+	email: PropTypes.string.isRequired
+}
+
 export default User

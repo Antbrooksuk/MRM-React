@@ -1,34 +1,11 @@
 import React, { Component } from "react"
 import PropTypes from 'prop-types'
 import UserLink from "./UserLink"
+import Preloader from "./Preloader"
 
+// List of users
 class UserList extends Component {
 	render() {
-		if(!this.props.users) {
-			return (
-				<div className="user_list">
-					<div className="preloader-wrapper small active">
-						<div className="spinner-layer spinner-green-only">
-							<div className="circle-clipper left">
-								<div className="circle"></div>
-							</div>
-							<div className="gap-patch">
-								<div className="circle"></div>
-							</div>
-							<div className="circle-clipper right">
-								<div className="circle"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			)
-		} else if(this.props.users.length === 0) {
-			return (
-				<div className="user_list">
-					<h4>None found</h4>
-				</div>
-			)
-		}
 		var userNodes = this.props.users.map(function(user){
 			return (
 				<UserLink name={user.name} email={user.email} key={user.id} id={user.id} />
@@ -36,10 +13,22 @@ class UserList extends Component {
 		})
 		return (
 			<div className="user_list">
-				<ul className="collection">
-					{userNodes}
-				</ul>
-				<button className="btn" onClick={this.props.onRefresh}>Refresh users</button>
+				{(!this.props.users) && (
+					<Preloader/>
+				)}
+
+				{(this.props.users.length === 0) && (
+					<h4>None found</h4>
+				)}
+
+				{(this.props.users.length > 0) && (
+					<div>
+						<ul className="collection">
+							{userNodes}
+						</ul>
+						<button className="btn" onClick={this.props.onRefresh}>Refresh users</button>
+					</div>
+				)}
 			</div>
 		)
 	}

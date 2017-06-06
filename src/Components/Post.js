@@ -1,6 +1,8 @@
 import React, { Component } from "react"
+import PropTypes from 'prop-types'
 import LazyLoad from 'react-lazy-load';
 
+// Single User post
 class Post extends Component {
 	render() {
 		return (
@@ -14,4 +16,10 @@ class Post extends Component {
 		)
 	}
 }
+
+Post.propTypes = {
+	title: PropTypes.string.isRequired,
+	body: PropTypes.string.isRequired
+}
+
 export default Post

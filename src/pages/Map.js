@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import GoogleMapReact from 'google-map-react';
 
@@ -17,7 +18,7 @@ class Map extends Component {
 				<div className="row">
 					<div className="col s12">
 						<h1>Map</h1>
-						<div className="map">
+						<div id="map">
 							<GoogleMapReact defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
 								<AnyReactComponent lat={51.505236} lng={-0.096760} text={'MRM Meteorite'} />
 							</GoogleMapReact>
@@ -28,4 +29,10 @@ class Map extends Component {
 		)
 	}
 }
+
+Map.propTypes = {
+	center: PropTypes.object.isRequired,
+	zoom: PropTypes.number.isRequired
+}
+
 export default Map

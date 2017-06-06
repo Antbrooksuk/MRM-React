@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 
+// Preloader reusable component
 class Preloader extends Component {
 	render() {
 		return (
@@ -19,5 +20,6 @@ class Preloader extends Component {
 		)
 	}
 }
+
 export default Preloader
 
