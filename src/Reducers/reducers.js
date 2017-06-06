@@ -61,4 +61,24 @@ export function posts (state = {
 	return state
 }
 
+export function article (state = {
+	error: null,
+	fetching: false,
+	article: []
+}, action){
+	switch(action.type) {
+		case "FETCHING_ARTICLE": {
+			return { ...state, fetching: true, article: [] }
+		}
+		case "FETCH_ARTICLE_FULFILLED": {
+			return { ...state, fetching: false, article: action.payload }
+		}
+		case "FETCH_ARTICLE_REJECTED": {
+			return { ...state, fetching: false, error: action.payload }
+		}
+		// no default
+	}
+	return state
+}
+
 export default users

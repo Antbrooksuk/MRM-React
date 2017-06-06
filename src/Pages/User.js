@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import {connect} from "react-redux"
 import UserDetails from "../components/UserDetails"
 import PostList from "../components/PostsList"
 import Preloader from "../components/Preloader"
+import {connect} from "react-redux"
 import {fetchUser} from "../actions"
 import { Link } from 'react-router-dom'
 

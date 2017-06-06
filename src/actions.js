@@ -44,3 +44,16 @@ export function clearUserPosts(params){
 		dispatch({ type: "CLEAR_USER_POSTS_FULFILLED" })
 	}
 }
+
+export function fetchArticle(params){
+	return function(dispatch){
+		dispatch({ type: "FETCHING_ARTICLE" })
+		axios.get("/api/article.json?q="+params.id)
+			.then((response) => {
+				dispatch({ type: "FETCH_ARTICLE_FULFILLED", payload: response.data })
+			})
+			.catch((err) => {
+				dispatch({ type: "FETCH_ARTICLE_REJECTED", payload: err })
+			})
+	}
+}

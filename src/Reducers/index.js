@@ -1,6 +1,6 @@
 import {combineReducers} from "redux"
-import users, {user, posts} from "./reducers"
+import users, {user, posts, article} from "./reducers"
 // Users is default, rest are variables
 export default combineReducers({
-	users, user, posts
+	users, user, posts, article
 })
