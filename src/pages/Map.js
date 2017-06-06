@@ -13,7 +13,7 @@ class Map extends Component {
 
 	render() {
 		return (
-			<div className="error">
+			<div className="map">
 				<div className="row">
 					<div className="col s12">
 						<h1>Map</h1>

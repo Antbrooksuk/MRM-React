@@ -59,6 +59,11 @@ class CustomForm extends React.Component {
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<div className="row">
+					<div className="col s12">
+						<h1>Form page</h1>
+					</div>
+				</div>
+				<div className="row">
 					<div className="input-field col s12">
 						<input 
 							autoFocus 

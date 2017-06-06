@@ -13,16 +13,11 @@ class Main extends Component {
 							<div className="container">
 								<div className="nav-wrapper">
 									<Link to='/' className="brand-logo">Logo</Link>
-									<Link to='/' data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></Link>
-									<ul id="nav-mobile" className="right hide-on-med-and-down">
+									<ul id="nav-mobile" className="right">
 										<li className={(active === "users" || active === "user") ? "active": ""}><Link to='/users'>Users</Link></li>
 										<li className={(active === "form") ? "active": ""}><Link to='/form'>Form</Link></li>
 										<li className={(active === "map") ? "active": ""}><Link to='/map'>Map</Link></li>
-									</ul>
-									<ul className="side-nav" id="mobile-demo">
-										<li className={(active === "users" || active === "user") ? "active": ""}><Link to='/users'>Users</Link></li>
-										<li className={(active === "form") ? "active": ""}><Link to='/form'>Form</Link></li>
-										<li className={(active === "map") ? "active": ""}><Link to='/map'>Map</Link></li>
+										<li className={(active === "article") ? "active": ""}><Link to='/article/asd'>Article</Link></li>
 									</ul>
 								</div>
 							</div>
