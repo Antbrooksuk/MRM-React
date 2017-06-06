@@ -15,24 +15,29 @@ class Article extends Component {
 	render() {
 		var articleNodes = this.props.article.map(function(article){
 			return (
-				<div>
+				<div key={article.id}>
 					<h1>{article.title}</h1>
 
 					{Object.keys(article.content).map(function(key) {
-						if(article.content[key][0] === "intro") {
-					    	return (
-					    		<p>{article.content[key][1]}</p>
-					    	)
+						if(article.content[key].type === "intro") {
+							return (
+								<p key={key}>{article.content[key].content}</p>
+							)
 						}
-						if(article.content[key][0] === "content") {
-					    	return (
-					    		<p>{article.content[key][1]}</p>
-					    	)
+						if(article.content[key].type === "content") {
+							return (
+								<p key={key}>{article.content[key].content}</p>
+							)
 						}
-						if(article.content[key][0] === "image") {
-					    	return (
-					    		<LazyLoad height={480}>
-									<img src={article.content[key][1]} />
+						if(article.content[key].type === "subtitle") {
+							return (
+								<h4 key={key}>{article.content[key].content}</h4>
+							)
+						}
+						if(article.content[key].type === "image") {
+							return (
+								<LazyLoad height={480} key={key}>
+									<img src={article.content[key].content} />
 								</LazyLoad>
 							)
 						}
