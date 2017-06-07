@@ -27,7 +27,7 @@ class User extends Component {
 							<p>Not found</p>
 						)}
 
-						{(this.props.user) && (
+						{(Object.keys(this.props.user).length !== 0) && (
 							<div>
 								<UserDetails name={this.props.user.name} email={this.props.user.email} id={this.props.user.id} />
 								<h4>Posts by {this.props.user.name}</h4>

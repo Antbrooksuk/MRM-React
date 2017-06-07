@@ -30,7 +30,7 @@ class Users extends Component {
 							<p>None found</p>
 						)}
 
-						{(this.props.users) && (
+						{(Object.keys(this.props.users).length !== 0) && (
 							<UserList users={this.props.users} onRefresh={this.refreshUsers.bind(this)} />
 						)}
 
