@@ -64,13 +64,9 @@ label {
 	margin:0 0 1.5em;
 }
 
-.LazyLoad {
+img {
 	display: block;
-	margin: 0 0 1.5em;
-	img {
-		display: block;
-		max-width:100%;
-	}
+	max-width:100%;
 }
 
 .marker {

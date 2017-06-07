@@ -1,11 +1,11 @@
 export function users (state = {
 	error: null,
 	fetching: false,
-	users: []
+	users: {}
 }, action){
 	switch(action.type) {
 		case "FETCHING_USERS": {
-			return { ...state, fetching: true, users: [] }
+			return { ...state, fetching: true, users: {} }
 		}
 		case "FETCH_USERS_FULFILLED": {
 			return { ...state, fetching: false, users: action.payload }
@@ -21,11 +21,11 @@ export function users (state = {
 export function user (state = {
 	error: null,
 	fetching: false,
-	user: []
+	user: {}
 }, action){
 	switch(action.type) {
 		case "FETCHING_USER": {
-			return { ...state, fetching: true, user: [] }
+			return { ...state, fetching: true, user: {} }
 		}
 		case "FETCH_USER_FULFILLED": {
 			return { ...state, fetching: false, user: action.payload }
