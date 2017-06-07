@@ -13,7 +13,7 @@
             },
             {
                 "type": "image",
-                "content": "/images/ph.jpg"
+                "content": "/static/images/ph.jpg"
             },
             {
                 "type": "subtitle",
@@ -33,7 +33,7 @@
             },
             {
                 "type": "image",
-                "content": "/images/ph.jpg"
+                "content": "/static/images/ph.jpg"
             },
             {
                 "type": "subtitle",

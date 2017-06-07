@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
-import LazyLoad from 'react-lazy-load';
+import Image from 'react-lazy-image';
 import Preloader from "../components/Preloader"
 import {connect} from "react-redux"
 import {fetchArticle} from "../actions"
@@ -36,9 +36,7 @@ class Article extends Component {
 						}
 						if(article.content[key].type === "image") {
 							return (
-								<LazyLoad height={480} key={key}>
-									<img src={article.content[key].content} />
-								</LazyLoad>
+								<Image key={key} source={article.content[key].content} />
 							)
 						}
 					})}

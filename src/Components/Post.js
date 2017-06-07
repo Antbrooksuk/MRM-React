@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from 'prop-types'
-import LazyLoad from 'react-lazy-load';
+import Image from 'react-lazy-image';
 
 // Single User post
 class Post extends Component {
@@ -9,9 +9,7 @@ class Post extends Component {
 			<li className="collection-item">
 				<h4>{this.props.title}</h4>
 				<p>{this.props.body}</p>
-				<LazyLoad height={480}>
-					<img src="/images/ph.jpg" />
-				</LazyLoad>
+				<Image source="/static/images/ph.jpg" />
 			</li>
 		)
 	}

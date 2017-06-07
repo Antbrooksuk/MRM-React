@@ -48,7 +48,7 @@ export function clearUserPosts(params){
 export function fetchArticle(params){
 	return function(dispatch){
 		dispatch({ type: "FETCHING_ARTICLE" })
-		axios.get("/api/article.json?q="+params.id)
+		axios.get("/static/api/article.json?q="+params.id)
 			.then((response) => {
 				dispatch({ type: "FETCH_ARTICLE_FULFILLED", payload: response.data })
 			})
