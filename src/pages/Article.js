@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Link } from 'react-router-dom'
 import Image from 'react-lazy-image';
 import Preloader from "../components/Preloader"
+import VideoPlayer from "../components/Video"
 import {connect} from "react-redux"
 import {fetchArticle} from "../actions"
 
@@ -37,6 +38,11 @@ class Article extends Component {
 						if(article.content[key].type === "image") {
 							return (
 								<Image key={key} source={article.content[key].content} />
+							)
+						}
+						if(article.content[key].type === "video") {
+							return (
+								<VideoPlayer key={key} url={article.content[key].content} playing={false} volume={0.5}  />
 							)
 						}
 					})}

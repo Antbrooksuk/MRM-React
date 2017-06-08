@@ -5,6 +5,7 @@ import Main from "./layouts/Main"
 // Import Pages
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
+import Video from "./pages/Video"
 import Article from "./pages/Article"
 import Users from "./pages/Users"
 import CustomForm from "./pages/Form"
@@ -18,6 +19,7 @@ const AppRouter = store => {
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route exact path="/contact" component={Contact} />
+					<Route exact path="/video" component={Video} />
 					<Route exact path="/users" component={Users} />
 					<Route exact path="/article/:id" component={Article} />
 					<Route exact path="/form" component={CustomForm} />

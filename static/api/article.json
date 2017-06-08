@@ -28,6 +28,10 @@
                 "content": "CONTENT2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex amet totam, aliquid, doloremque libero magnam nisi vero vitae hic. Autem dignissimos, voluptatem odit tempora quae debitis rerum. Commodi qui, officiis?"
             },
             {
+                "type": "video",
+                "content": "https://www.youtube.com/watch?v=ysz5S6PUM-U"
+            },
+            {
                 "type": "content",
                 "content": "CONTENT3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iste in itaque optio commodi quo rem molestiae? Aut corporis esse odio hic at similique, ea earum pariatur itaque, harum iure."
             },

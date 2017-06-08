@@ -52,7 +52,8 @@ module.exports = {
 	    host: 'localhost',
 	    port: 8000,
 	    historyApiFallback: true,
-	    hot: true
+	    hot: true,
+	    open:true
   	}
 
 };

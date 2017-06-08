@@ -16,8 +16,9 @@ class Home extends Component {
 							<li className="collection-header"><h4>React components to check out</h4></li>
 							<li className="collection-item"><a target="_blank" href='https://github.com/akiran/react-slick'>React Slick</a></li>
 							<li className="collection-item"><a target="_blank" href='https://github.com/hzdg/react-google-analytics'>Google analytics</a></li>
-							<li className="collection-item"><a target="_blank" href='https://github.com/gorangajic/react-icons'>Icons</a></li>
-							<li className="collection-item"><a target="_blank" href='https://github.com/zeit/next.js'>Server side rendering Next.js</a></li>
+							<li className="collection-item">Video - Youtube</li>
+							<li className="collection-item">Social</li>
+							<li className="collection-item">Social</li>
 						</ul>
 					</div>
 				</div>

@@ -13,9 +13,8 @@ export function users (state = {
 		case "FETCH_USERS_REJECTED": {
 			return { ...state, fetching: false, error: action.payload }
 		}
-		// no default
+		default: return state
 	}
-	return state
 }
 
 export function user (state = {
@@ -33,9 +32,8 @@ export function user (state = {
 		case "FETCH_USER_REJECTED": {
 			return { ...state, fetching: false, error: action.payload }
 		}
-		// no default
+		default: return state
 	}
-	return state
 }
 
 export function posts (state = {
@@ -56,9 +54,8 @@ export function posts (state = {
 		case "CLEAR_USER_POSTS_FULFILLED": {
 			return { ...state, posts: [] }
 		}
-		// no default
+		default: return state
 	}
-	return state
 }
 
 export function article (state = {
@@ -76,9 +73,8 @@ export function article (state = {
 		case "FETCH_ARTICLE_REJECTED": {
 			return { ...state, fetching: false, error: action.payload }
 		}
-		// no default
+		default: return state
 	}
-	return state
 }
 
 export default users

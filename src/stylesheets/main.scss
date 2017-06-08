@@ -29,7 +29,6 @@
 @import 'components/file-input';
 @import 'components/range';
 
-
 footer, main {
 	padding:1.5em 0 0.5em;
 	background:#fff;
@@ -71,15 +70,38 @@ img {
 
 .marker {
 	position: absolute;
-		width: 100px;
-		height: 60px;
-		left: -50px;
-		top: -30px;
-		border: 5px solid #f44336;
-		background-color: white;
-		text-align: center;
-		color: #3f51b5;
-		font-size: 16px;
-		font-weight: bold;
-		padding: 4px;
+	width: 100px;
+	height: 60px;
+	left: -50px;
+	top: -30px;
+	border: 5px solid #f44336;
+	background-color: white;
+	text-align: center;
+	color: #3f51b5;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.loading {
+	background: rgba(0,0,0,0.2);
+	position: fixed;
+	z-index: 1031;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	transition: all 200ms ease !important;
+}
+
+.videoPlayer {
+	border:1em solid $primary-color;
+	padding:1em;
+	iframe {
+		display: block;
+		margin:0 0 1em;
+	}
+	p {
+		margin-bottom: 0;
+	}
 }
