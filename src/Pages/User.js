@@ -15,27 +15,23 @@ class User extends Component {
 	render() {
 		return (
 			<div className="user">
-				<div className="row">
-					<div className="col s12">
-						<h1>User details</h1>
+				<h1>User details</h1>
 
-						{(!this.props.user || this.props.fetching) && (
-							<Preloader/>
-						)}
+				{(!this.props.user || this.props.fetching) && (
+					<Preloader/>
+				)}
 
-						{(!this.props.user && !this.props.fetching) && (
-							<p>Not found</p>
-						)}
+				{(!this.props.user && !this.props.fetching) && (
+					<p>Not found</p>
+				)}
 
-						{(Object.keys(this.props.user).length !== 0) && (
-							<div>
-								<UserDetails name={this.props.user.name} email={this.props.user.email} id={this.props.user.id} />
-								<h4>Posts by {this.props.user.name}</h4>
-								<PostList name={this.props.user.name} id={this.props.user.id} />
-							</div>
-						)}
+				{(Object.keys(this.props.user).length !== 0) && (
+					<div>
+						<UserDetails name={this.props.user.name} email={this.props.user.email} id={this.props.user.id} />
+						<h4>Posts by {this.props.user.name}</h4>
+						<PostList name={this.props.user.name} id={this.props.user.id} />
 					</div>
-				</div>
+				)}
 			</div>
 		)
 	}

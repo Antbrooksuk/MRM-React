@@ -32,7 +32,7 @@ class Video extends Component {
 			<div className="videoPlayer">
 				<ReactPlayer 
 					width="auto" 
-					height="420" 
+					height="420px" 
 					progressFrequency={100}
 					controls={true} 
 					url={this.props.url} 

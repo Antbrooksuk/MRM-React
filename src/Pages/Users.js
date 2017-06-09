@@ -18,24 +18,19 @@ class Users extends Component {
 	render() {
 		return (
 			<div className="users">
-				<div className="row">
-					<div className="col s12">
-						<h1>User list</h1>
+				<h1>User list</h1>
 
-						{(!this.props.users || this.props.fetching) && (
-							<Preloader/>
-						)}
+				{(!this.props.users || this.props.fetching) && (
+					<Preloader/>
+				)}
 
-						{(!this.props.users && !this.props.fetching) && (
-							<p>None found</p>
-						)}
+				{(!this.props.users && !this.props.fetching) && (
+					<p>None found</p>
+				)}
 
-						{(Object.keys(this.props.users).length !== 0) && (
-							<UserList users={this.props.users} onRefresh={this.refreshUsers.bind(this)} />
-						)}
-
-					</div>
-				</div>
+				{(Object.keys(this.props.users).length !== 0) && (
+					<UserList users={this.props.users} onRefresh={this.refreshUsers.bind(this)} />
+				)}
 			</div>
 		)
 	}

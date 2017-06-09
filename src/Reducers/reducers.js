@@ -76,5 +76,3 @@ export function article (state = {
 		default: return state
 	}
 }
-
-export default users

@@ -29,14 +29,19 @@
 @import 'components/file-input';
 @import 'components/range';
 
+h1 {
+	margin-top: 0;
+}
+
 footer, main {
-	padding:1.5em 0 0.5em;
+	padding:1.5em 0;
 	background:#fff;
 }
 
 aside {
 	background:#f4f4f4;
 	padding:1.5em;
+	margin-bottom: 1.5em;
 }
 
 footer {

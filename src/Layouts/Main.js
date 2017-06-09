@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {withRouter} from 'react-router'
-import { Link } from 'react-router-dom'
+import Header from './Header'
+import Footer from './Footer'
 import LoadingBar from 'react-redux-loading-bar'
 
 class Main extends Component {
@@ -9,36 +10,27 @@ class Main extends Component {
 		return (
 			<div id="app">
 				<LoadingBar showFastActions progressIncrease={25} className="loading" />
-				<header>
-					<nav className="nav-extended">
-						<div className="container">
-							<div className="nav-wrapper">
-								<Link to='/' className="brand-logo">Logo</Link>
-								<ul id="nav-mobile" className="right">
-									<li className={(active === "users" || active === "user") ? "active": ""}><Link to='/users'>Users</Link></li>
-									<li className={(active === "form") ? "active": ""}><Link to='/form'>Form</Link></li>
-									<li className={(active === "contact") ? "active": ""}><Link to='/contact'>Contact</Link></li>
-									<li className={(active === "video") ? "active": ""}><Link to='/video'>Video</Link></li>
-									<li className={(active === "article") ? "active": ""}><Link to='/article/asd'>Article</Link></li>
-								</ul>
-							</div>
-						</div>
-					</nav>
-				</header>
+				<Header active={active} />
 				<main>
 					<div className="container">
-						{this.props.children}
-					</div>
-				</main>
-				<footer>
-					<div className="container">
 						<div className="row">
-							<div className="col s12">
-								&copy;copy
+							<div className="col s12 m8">
+								{this.props.children}
+							</div>
+							<div className="col s12 m4">
+								<aside>
+									<h4>Lorem</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique adipisci delectus libero corrupti, quae. Nulla, perspiciatis. Minima quo libero facilis officiis, dolorem explicabo voluptates expedita est voluptatibus recusandae cum repudiandae.</p>
+								</aside>
+								<aside>
+									<h4>Lorem</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique adipisci delectus libero corrupti, quae. Nulla, perspiciatis. Minima quo libero facilis officiis, dolorem explicabo voluptates expedita est voluptatibus recusandae cum repudiandae.</p>
+								</aside>
 							</div>
 						</div>
 					</div>
-				</footer>
+				</main>
+				<Footer />
 			</div>
 		)
 	}
