@@ -13,6 +13,7 @@ class Header extends Component {
 							<ul id="nav-mobile" className="right">
 								<li className={(this.props.active === "users" || this.props.active === "user") ? "active": ""}><Link to='/users'>Users</Link></li>
 								<li className={(this.props.active === "form") ? "active": ""}><Link to='/form'>Form</Link></li>
+								<li className={(this.props.active === "gallery") ? "active": ""}><Link to='/gallery'>Gallery</Link></li>
 								<li className={(this.props.active === "contact") ? "active": ""}><Link to='/contact'>Contact</Link></li>
 								<li className={(this.props.active === "article") ? "active": ""}><Link to='/article/asd'>Article</Link></li>
 							</ul>

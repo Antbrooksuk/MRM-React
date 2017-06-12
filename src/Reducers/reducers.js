@@ -17,6 +17,25 @@ export function users (state = {
 	}
 }
 
+export function gallery (state = {
+	error: null,
+	fetching: false,
+	gallery: []
+}, action){
+	switch(action.type) {
+		case "FETCHING_IMAGES": {
+			return { ...state, fetching: true, gallery: [] }
+		}
+		case "FETCH_IMAGES_FULFILLED": {
+			return { ...state, fetching: false, gallery: action.payload }
+		}
+		case "FETCH_IMAGES_REJECTED": {
+			return { ...state, fetching: false, gallery: action.payload }
+		}
+		default: return state
+	}
+}
+
 export function user (state = {
 	error: null,
 	fetching: false,

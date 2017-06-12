@@ -110,3 +110,29 @@ img {
 		margin-bottom: 0;
 	}
 }
+
+.gallery {
+	.gallery-list {
+		@include clearfix;
+		.gallery-image {
+			display: block;
+			float: left;
+			width:23em;
+			height:0px;
+			padding-bottom: 35%;
+			background:#f4f4f4;
+			margin:0 1em 1em 0;
+			position: relative;
+			img {
+				position: absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				margin:auto;
+				max-width:90%;
+				max-height:90%;
+			}
+		}
+	}
+}
