@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import PropTypes from 'prop-types'
-import Preloader from "./Preloader"
 import Image from 'react-lazy-image';
 
 // List of gallery
@@ -16,12 +15,9 @@ class GalleryList extends Component {
 		})
 		return (
 			<div className="gallery">
-				{(!this.props.gallery) && (
-					<Preloader/>
-				)}
 
-				{(this.props.gallery.length === 0) && (
-					<h4>None found</h4>
+				{(Object.keys(this.props.gallery.photos.photo).length === 0) && (
+					<p>None found</p>
 				)}
 
 				{(Object.keys(this.props.gallery.photos.photo).length !== 0) && (

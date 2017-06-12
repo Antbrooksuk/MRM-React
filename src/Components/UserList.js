@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from 'prop-types'
 import UserLink from "./UserLink"
-import Preloader from "./Preloader"
 
 // List of users
 class UserList extends Component {
@@ -13,9 +12,6 @@ class UserList extends Component {
 		})
 		return (
 			<div className="user_list">
-				{(!this.props.users) && (
-					<Preloader/>
-				)}
 
 				{(this.props.users.length === 0) && (
 					<h4>None found</h4>

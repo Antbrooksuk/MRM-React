@@ -19,6 +19,29 @@ class Gallery extends Component {
 		var currentPage = parseInt(this.props.match.params.page || 1, 10)
 		var prevPage = "/gallery/" + (currentPage-1)
 		var nextPage = "/gallery/" + (currentPage+1)
+
+		let prevButton, nextButton = null
+		
+		if((currentPage-1) > 0) {
+			prevButton = <li>
+				<Link to={prevPage} onClick={this.redrawGallery.bind(this, (currentPage-1))}>&larr;Prev</Link>
+			</li>
+		}
+
+		if(Object.keys(this.props.gallery).length !== 0) {
+			if(this.props.gallery.photos.photo.length === 15) {
+				nextButton = <li>
+					<Link to={nextPage} onClick={this.redrawGallery.bind(this, (currentPage+1))}>Next&rarr;</Link>
+				</li>
+			}
+		}	
+
+		let pagination = <ul className="pagination">
+			{prevButton}
+			<li className="active"><a>Page {currentPage}</a></li>
+			{nextButton}
+		</ul>
+
 		return (
 			<div className="gallery">
 				<h1>Gallery</h1>
@@ -27,25 +50,14 @@ class Gallery extends Component {
 					<Preloader/>
 				)}
 
-				{(!this.props.gallery && !this.props.fetching) && (
-					<p>None found</p>
-				)}
+				{pagination}
 
 				{(Object.keys(this.props.gallery).length !== 0) && (
-					<div>
-						<ul className="pagination">
-				    		<li>
-								<Link to={prevPage} onClick={this.redrawGallery.bind(this, (currentPage-1))}>&larr;Prev</Link>
-					    	</li>
-						    <li className="active"><a>Page {currentPage}</a></li>
-			    			<li>
-			    				<Link to={nextPage} onClick={this.redrawGallery.bind(this, (currentPage+1))}>Next&rarr;</Link>
-					    	</li>
-						  </ul>
-
-						<GalleryList gallery={this.props.gallery} />
-					</div>
+					<GalleryList gallery={this.props.gallery} />
 				)}
+				
+				{pagination}
+
 			</div>
 		)
 	}
