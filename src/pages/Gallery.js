@@ -29,7 +29,7 @@ class Gallery extends Component {
 		}
 
 		if(Object.keys(this.props.gallery).length !== 0) {
-			if(this.props.gallery.photos.photo.length === 15) {
+			if(this.props.gallery.photos.photo.length === 8) {
 				nextButton = <li>
 					<Link to={nextPage} onClick={this.redrawGallery.bind(this, (currentPage+1))}>Next&rarr;</Link>
 				</li>
@@ -52,10 +52,8 @@ class Gallery extends Component {
 
 				{pagination}
 
-				{(Object.keys(this.props.gallery).length !== 0) && (
-					<GalleryList gallery={this.props.gallery} />
-				)}
-				
+				<GalleryList gallery={this.props.gallery} />
+
 				{pagination}
 
 			</div>

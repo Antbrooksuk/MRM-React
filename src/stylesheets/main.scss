@@ -117,12 +117,23 @@ img {
 		.gallery-image {
 			display: block;
 			float: left;
-			width:23em;
+			width:50%;
 			height:0px;
 			padding-bottom: 35%;
-			background:#f4f4f4;
-			margin:0 1em 1em 0;
 			position: relative;
+			&:after {
+				content:"";
+				position: absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				background:#eee;
+				margin:auto;
+				max-width:95%;
+				max-height:95%;
+				z-index: 1;
+			}
 			img {
 				position: absolute;
 				top:0;
@@ -132,6 +143,7 @@ img {
 				margin:auto;
 				max-width:90%;
 				max-height:90%;
+				z-index: 2;
 			}
 		}
 	}

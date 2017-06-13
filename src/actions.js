@@ -65,7 +65,7 @@ export function fetchImages(params){
 	return function(dispatch){
 		dispatch({ type: "FETCHING_IMAGES" })
 		dispatch(showLoading())
-		axios.get("https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=69b2be122a9b287e85d377673edef6e6&user_id=96641656@N04&format=json&per_page=15&page="+params.page+"&nojsoncallback=1")
+		axios.get("https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=69b2be122a9b287e85d377673edef6e6&user_id=96641656@N04&format=json&per_page=8&page="+params.page+"&nojsoncallback=1")
 			.then((response) => {
 				dispatch({ type: "FETCH_IMAGES_FULFILLED", payload: response.data })
 				dispatch(hideLoading())
