@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 // Preloader reusable component
 class Header extends Component {
@@ -9,13 +9,13 @@ class Header extends Component {
 				<nav className="nav-extended">
 					<div className="container">
 						<div className="nav-wrapper">
-							<Link to='/' className="brand-logo">Logo</Link>
+							<NavLink to='/' className="brand-logo">Logo</NavLink>
 							<ul id="nav-mobile" className="right">
-								<li className={(this.props.active === "users" || this.props.active === "user") ? "active": ""}><Link to='/users'>Users</Link></li>
-								<li className={(this.props.active === "form") ? "active": ""}><Link to='/form'>Form</Link></li>
-								<li className={(this.props.active === "gallery") ? "active": ""}><Link to='/gallery'>Gallery</Link></li>
-								<li className={(this.props.active === "contact") ? "active": ""}><Link to='/contact'>Contact</Link></li>
-								<li className={(this.props.active === "article") ? "active": ""}><Link to='/article/asd'>Article</Link></li>
+								<li><NavLink activeClassName="active" to='/users'>Users</NavLink></li>
+								<li><NavLink activeClassName="active" to='/form'>Form</NavLink></li>
+								<li><NavLink activeClassName="active" to='/gallery'>Gallery</NavLink></li>
+								<li><NavLink activeClassName="active" to='/contact'>Contact</NavLink></li>
+								<li><NavLink activeClassName="active" to='/article/asd'>Article</NavLink></li>
 							</ul>
 						</div>
 					</div>

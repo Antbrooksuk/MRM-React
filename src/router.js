@@ -21,9 +21,9 @@ const AppRouter = store => {
 					<Route exact path="/contact" component={Contact} />
 					<Route path="/gallery/:page?" component={Gallery} />
 					<Route exact path="/users" component={Users} />
+					<Route exact path="/users/:id" component={User} />
 					<Route exact path="/article/:id" component={Article} />
 					<Route exact path="/form" component={CustomForm} />
-					<Route exact path="/user/:id" component={User} />
 					<Route path="*" component={NotFound} />
 				</Switch>
 			</MainLayout>

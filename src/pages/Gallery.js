@@ -11,8 +11,10 @@ class Gallery extends Component {
 		this.props.dispatch(fetchImages({ page: this.props.match.params.page || 1 }))
 	}
 
-	redrawGallery(page){
-		this.props.dispatch(fetchImages({ page: page }))
+	componentWillReceiveProps(nextProps){
+		if (nextProps.location.pathname != this.props.location.pathname) {
+			this.props.dispatch(fetchImages({ page: this.props.match.params.page || 1 }))
+		}
 	}
 
 	render() {
@@ -24,14 +26,14 @@ class Gallery extends Component {
 		
 		if((currentPage-1) > 0) {
 			prevButton = <li>
-				<Link to={prevPage} onClick={this.redrawGallery.bind(this, (currentPage-1))}>&larr;Prev</Link>
+				<Link to={prevPage}>&larr; Prev</Link>
 			</li>
 		}
 
 		if(Object.keys(this.props.gallery).length !== 0) {
 			if(this.props.gallery.photos.photo.length === 8) {
 				nextButton = <li>
-					<Link to={nextPage} onClick={this.redrawGallery.bind(this, (currentPage+1))}>Next&rarr;</Link>
+					<Link to={nextPage}>Next &rarr;</Link>
 				</li>
 			}
 		}	
