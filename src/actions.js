@@ -15,7 +15,7 @@ export function fetchUsers(){
 					dispatch({ type: "FETCH_USERS_REJECTED", payload: err })
 					dispatch(hideLoading())
 				})
-		}, 1000)
+		}, 1)
 	}
 }
 
@@ -33,7 +33,7 @@ export function fetchUser(params){
 					dispatch({ type: "FETCH_USER_REJECTED", payload: err })
 					dispatch(hideLoading())
 				})
-		}, 1000)
+		}, 1)
 	}
 }
 
@@ -51,7 +51,7 @@ export function fetchUserPosts(params){
 					dispatch({ type: "FETCH_USER_POSTS_REJECTED", payload: err })
 					dispatch(hideLoading())
 				})
-		}, 1000)
+		}, 1)
 	}
 }
 
@@ -91,6 +91,6 @@ export function fetchArticle(params){
 					dispatch({ type: "FETCH_ARTICLE_REJECTED", payload: err })
 					dispatch(hideLoading())
 				})
-		}, 1000)
+		}, 1)
 	}
 }

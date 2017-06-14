@@ -5,7 +5,7 @@ import Preloader from "../components/Preloader"
 import {fetchUsers} from "../actions"
 import { Link } from 'react-router-dom'
 
-class Users extends Component {
+class UsersPage extends Component {
 
 	componentWillMount(){
 		this.props.dispatch(fetchUsers())
@@ -45,4 +45,4 @@ const mapStateToProps = (store) => ({
 	fetching: store.users.fetching
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Users)
+export default connect(mapStateToProps, mapDispatchToProps)(UsersPage)

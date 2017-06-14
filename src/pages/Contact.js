@@ -1,7 +1,9 @@
 import React, { Component } from "react"
+import { Link } from 'react-router-dom'
+import FormEntry from "../components/Form"
 import Map from "../components/Map"
 
-class Contact extends Component {
+class ContactPage extends React.Component {
 
 	static defaultProps = {
 		map: {
@@ -15,14 +17,24 @@ class Contact extends Component {
 
 	render() {
 		return (
-			<div className="map">
-				<h1>Contact</h1>
-				<div id="map">
-					<Map center={this.props.map.center} zoom={this.props.map.zoom} nodes={this.props.map.nodes} />
+			<div>
+				<div className="row">
+					<div className="col s12">
+						<h1>Contact page</h1>
+					</div>
+				</div>
+				<div className="row">
+					<div className="col s12">
+						<FormEntry />
+					</div>
+				</div>
+				<div className="row">
+					<div className="col s12">
+						<Map center={this.props.map.center} zoom={this.props.map.zoom} nodes={this.props.map.nodes} />
+					</div>
 				</div>
 			</div>
 		)
 	}
 }
-
-export default Contact
+export default ContactPage

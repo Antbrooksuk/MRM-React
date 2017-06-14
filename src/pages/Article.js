@@ -6,7 +6,7 @@ import VideoPlayer from "../components/Video"
 import {connect} from "react-redux"
 import {fetchArticle} from "../actions"
 
-class Article extends Component {
+class ArticlePage extends Component {
 
 	componentWillMount() {
 		// Fetch page data
@@ -71,4 +71,4 @@ const mapStateToProps = (store) => ({
 	fetching: store.article.fetching
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Article)
+export default connect(mapStateToProps, mapDispatchToProps)(ArticlePage)

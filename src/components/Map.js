@@ -12,9 +12,11 @@ class Map extends Component {
 			)
 		})
 		return (
-			<GoogleMapReact defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
-				{mapNodes}
-			</GoogleMapReact>
+			<div id="map">
+				<GoogleMapReact defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
+					{mapNodes}
+				</GoogleMapReact>
+			</div>
 		)
 	}
 }

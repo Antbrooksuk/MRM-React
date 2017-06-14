@@ -5,7 +5,7 @@ import Preloader from "../components/Preloader"
 import {fetchImages} from "../actions"
 import { Link } from 'react-router-dom'
 
-class Gallery extends Component {
+class GalleryPage extends Component {
 
 	componentWillMount(){
 		this.props.dispatch(fetchImages({ page: this.props.match.params.page || 1 }))
@@ -72,4 +72,4 @@ const mapStateToProps = (store) => ({
 	fetching: store.users.fetching
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Gallery)
+export default connect(mapStateToProps, mapDispatchToProps)(GalleryPage)

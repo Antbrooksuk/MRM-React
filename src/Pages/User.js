@@ -6,7 +6,7 @@ import {connect} from "react-redux"
 import {fetchUser} from "../actions"
 import { Link } from 'react-router-dom'
 
-class User extends Component {
+class UserPage extends Component {
 
 	componentWillMount(){
 		this.props.dispatch(fetchUser({ id: this.props.match.params.id }))
@@ -46,4 +46,4 @@ const mapStateToProps = (store) => ({
 	fetching: store.user.fetching
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(User)
+export default connect(mapStateToProps, mapDispatchToProps)(UserPage)
