@@ -16,15 +16,16 @@ class Posts extends Component {
 	}
 
 	render = () => {
-		var posts = this.props.posts, postslist = []
-		if(Object.keys(posts).length > 0) {
-			postslist = Object.keys(posts.data).map(function(key){
-				return <Post key={posts.data[key].id} content={posts.data[key]} />
-			})
-		}
+		// Save the posts
+		var posts = this.props.posts.data, 
+			postslist = []
+		// Create the posts
+		postslist = Object.keys(posts).map(function(key){
+			return <Post key={posts[key].id} content={posts[key]} />
+		})
 		
 		return (
-			<div>
+			<div className="posts">
 				{postslist}
 			</div>
 		)

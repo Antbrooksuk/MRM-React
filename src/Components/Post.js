@@ -1,19 +1,6 @@
 import React, { Component } from "react"
 
 class Post extends Component {
-
-	state = {
-
-	}
-
-	componentWillMount() {
-		
-	}
-
-	componentWillReceiveProps(nextProps) {
-		
-	}
-
 	render = () => {
 		return (
 			<div className="post">
@@ -22,7 +9,6 @@ class Post extends Component {
 			</div>
 		)
 	}
-
 }
 
 export default Post

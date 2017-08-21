@@ -1,17 +1,17 @@
 export function posts (state = {
-	error: {},
-	posts: {},
-	fetching: false
+	errored: false,
+	fetched: false,
+	posts: {}
 }, action){
 	switch(action.type) {
 		case "FETCH_NOTES_REQUEST": {
-			return { ...state, posts: {}, fetching: true }
+			return { ...state, posts: {}, fetched: false }
 		}
 		case "FETCH_NOTES_SUCCESS": {
-			return { ...state, posts: action.payload, fetching: false }
+			return { ...state, posts: action.payload, fetched: true }
 		}
 		case "FETCH_NOTES_FAILURE": {
-			return { ...state, posts: {}, error: action.payload, fetching: false }
+			return { ...state, posts: {}, errored: action.payload, fetched: true }
 		}
 		default: return state
 	}

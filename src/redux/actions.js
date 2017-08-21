@@ -3,8 +3,7 @@ import axios from 'axios'
 export function fetchPosts(){
 	return dispatch => {
 		dispatch({ type: "FETCH_NOTES_REQUEST" })
-		var url = "https://jsonplaceholder.typicode.com/posts"
-		return axios.get(url).then(function (response) {
+		return axios.get("https://jsonplaceholder.typicode.com/posts").then(function (response) {
 			if (response) {
 				dispatch({ type: "FETCH_NOTES_SUCCESS", payload: response })
 			} else {

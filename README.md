@@ -1,12 +1,12 @@
 ## MRM React Redux
 
 ```sh
-$ npm install
+$ yarn install
 ```
 
 ```sh
-$ npm run dev
+$ yarn dev
 ```
 ```sh
-$ npm run build
+$ yarn build
 ```
