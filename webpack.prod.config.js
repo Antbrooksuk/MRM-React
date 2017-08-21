@@ -1,19 +1,31 @@
-var Webpack = require('webpack');
+var webpack = require('webpack');
 var path = require('path');
 var nodeModulesPath = path.resolve(__dirname, 'node_modules');
-var buildPath = path.resolve(__dirname, 'build', 'static');
+var buildPath = path.resolve(__dirname, 'public');
 var mainPath = path.resolve(__dirname, 'src', 'index.js');
 
 module.exports = {
 
-  // We change to normal source mapping
-  devtool: 'source-map',
-  entry: mainPath,
-  output: {
-    path: buildPath,
-    filename: 'bundle.js'
-  },
-  module: {
+	entry: ["babel-polyfill", mainPath],
+
+	output: {
+		path: buildPath,
+		filename: 'bundle.js'
+	},
+	
+	devtool: 'cheap-module-source-map',
+
+	plugins: [
+		new webpack.optimize.AggressiveMergingPlugin(),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: { warnings: false },
+			comments: false,
+			sourceMap: true,
+			minimize: false
+		})
+	],
+
+	module: {
 		loaders: [
 			{
 				test: /\.(js|jsx)$/,

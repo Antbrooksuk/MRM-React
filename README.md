@@ -5,5 +5,8 @@ $ npm install
 ```
 
 ```sh
-$ npm start
+$ npm run dev
+```
+```sh
+$ npm run build
 ```

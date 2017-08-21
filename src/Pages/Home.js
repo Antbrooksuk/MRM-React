@@ -1,19 +1,56 @@
 import React, { Component } from "react"
-import { Link } from 'react-router-dom'
+import Cards from "../components/Cards"
+import { connect } from "react-redux"
+import { fetchPosts } from "../redux/actions"
 
 class HomePage extends Component {
-	render() {
+
+	state = {
+		
+	}
+
+	updatePosts = () => {
+		this.props.dispatch(fetchPosts())
+	}
+
+	componentWillMount = () => {
+		if(Object.keys(this.props.posts).length === 0) {
+			this.props.dispatch(fetchPosts())
+		}
+	}
+
+	componentWillReceiveProps(nextProps) {
+		nextProps
+	}
+
+	render = () => {
+
+		var posts = this.props.posts
+
+		if(this.props.posts) {
+			return (
+				<div className="home">
+					<Posts posts={posts} />
+					<button onClick={this.updatePosts.bind(this)}>Update</button>
+				</div>
+			)
+		} 
+
 		return (
 			<div className="home">
-				<h1>App Home</h1>
-				<ul className="collection with-header">
-					<li className="collection-header"><h4>React components to check out</h4></li>
-					<li className="collection-item"><a target="_blank" href='https://github.com/akiran/react-slick'>React Slick</a></li>
-					<li className="collection-item"><a target="_blank" href='https://github.com/hzdg/react-google-analytics'>Google analytics</a></li>
-					<li className="collection-item">Social</li>
-				</ul>
+				<p>Loading ... </p>				
 			</div>
 		)
+
 	}
 }
-export default HomePage
+
+const mapDispatchToProps = (dispatch) => ({
+	dispatch: dispatch
+})
+
+const mapStateToProps = (store) => ({
+	posts: store.posts.posts
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage)

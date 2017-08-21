@@ -1,11 +1,10 @@
 var path = require('path');
 var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
 
 	entry: [
+		'babel-polyfill',
 		'react-hot-loader/patch',
 		'webpack-dev-server/client?http://localhost:8000',
 		'webpack/hot/only-dev-server',
@@ -14,17 +13,19 @@ module.exports = {
 
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist'),
-		publicPath: '/static/'
+		path: path.resolve(__dirname, "public"),
+		pathinfo: true,
+		publicPath: '/'
 	},
 
-	devtool: 'inline-source-map',
-
+	devtool: 'source-map',
+	
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
-	    new webpack.NamedModulesPlugin(),
-	    new webpack.NoEmitOnErrorsPlugin(),
+		new webpack.NamedModulesPlugin(),
+		new webpack.NoEmitOnErrorsPlugin()
 	],
+
 	module: {
 		loaders: [
 			{
@@ -48,12 +49,15 @@ module.exports = {
 		]
 	},
 
- 	devServer: {
-	    host: 'localhost',
-	    port: 8000,
-	    historyApiFallback: true,
-	    hot: true,
-	    open:true
-  	}
+	devServer: {
+		host: 'localhost',
+		port: 8000,
+		contentBase: path.join(__dirname, "public"),
+		publicPath: "/",
+		openPage: '',
+		historyApiFallback: true,
+		hot: true,
+		open:true
+	}
 
 };

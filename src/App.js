@@ -1,11 +1,11 @@
 import React, { Component } from "react"
-import {Provider} from "react-redux"
 import store from "./store"
 import AppRouter from './router'
+import { Provider } from "react-redux"
 import './stylesheets/main.scss'
 
-export default class App extends Component {
-	render() {
+class App extends Component {
+	render = () => {
 		return (
 			<Provider store={store}>
 				{AppRouter(store)}
@@ -13,3 +13,5 @@ export default class App extends Component {
 		)
 	}
 }
+
+export default App
