@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Cards from "../components/Cards"
+import Posts from "../components/Posts"
 import { connect } from "react-redux"
 import { fetchPosts } from "../redux/actions"
 
@@ -27,7 +27,7 @@ class HomePage extends Component {
 
 		var posts = this.props.posts
 
-		if(this.props.posts) {
+		if(Object.keys(posts).length > 0) {
 			return (
 				<div className="home">
 					<Posts posts={posts} />

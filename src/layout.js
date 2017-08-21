@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import { connect } from "react-redux"
-import { checkUser } from "./redux/actions"
 import { withRouter } from 'react-router-dom'
 
 class Main extends Component {
@@ -30,9 +28,5 @@ class Main extends Component {
 	}
 }
 
-const mapStateToProps = (store) => ({
-	user: store.current_user.current_user
-})
-
-export default withRouter(connect(mapStateToProps, null)(Main))
+export default withRouter(Main)
 

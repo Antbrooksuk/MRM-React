@@ -6,7 +6,7 @@ export function fetchPosts(){
 		var url = "https://jsonplaceholder.typicode.com/posts"
 		return axios.get(url).then(function (response) {
 			if (response) {
-				dispatch({ type: "FETCH_NOTES_SUCCESS", payload: safedata })
+				dispatch({ type: "FETCH_NOTES_SUCCESS", payload: response })
 			} else {
 				dispatch({ type: "FETCH_NOTES_FAILURE", payload: "None Found" })
 			}
