@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
 
 class Post extends Component {
 	render = () => {
@@ -7,9 +7,8 @@ class Post extends Component {
 				<h4>{this.props.content.title}</h4>
 				<p>{this.props.content.body}</p>
 			</div>
-		)
-	}
+		);
+	};
 }
 
-export default Post
-
+export default Post;

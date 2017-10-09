@@ -1,17 +1,13 @@
-import React, { Component } from "react"
-import store from "./store"
-import AppRouter from './router'
-import { Provider } from "react-redux"
-import './stylesheets/main.scss'
+import React, { Component } from 'react';
+import store from './store';
+import AppRouter from './router';
+import { Provider } from 'react-redux';
+import './stylesheets/main.scss';
 
 class App extends Component {
 	render = () => {
-		return (
-			<Provider store={store}>
-				{AppRouter(store)}
-			</Provider>
-		)
-	}
+		return <Provider store={store}>{AppRouter(store)}</Provider>;
+	};
 }
 
-export default App
+export default App;
