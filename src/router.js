@@ -1,12 +1,12 @@
-import React from "react"
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Import Layouts
-import MainLayout from "./layout"
+import MainLayout from './layout';
 // Import Pages
-import Home from "./pages/Home"
-import NotFound from "./pages/NotFound"
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 // Create router with access to store
-const AppRouter = (store) => {
+const AppRouter = store => {
 	return (
 		<Router>
 			<MainLayout>
@@ -16,6 +16,6 @@ const AppRouter = (store) => {
 				</Switch>
 			</MainLayout>
 		</Router>
-	)
-}
-export default AppRouter
+	);
+};
+export default AppRouter;

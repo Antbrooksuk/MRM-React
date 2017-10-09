@@ -1,15 +1,10 @@
-import React, {Component} from 'react'
-import { withRouter } from 'react-router-dom'
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 class Main extends Component {
+	componentWillMount() {}
 
-	componentWillMount() {
-		
-	}
-
-	componentDidUpdate() {
-
-	}
+	componentDidUpdate() {}
 
 	render = () => {
 		return (
@@ -17,16 +12,13 @@ class Main extends Component {
 				<header>
 					<h1>Example React App</h1>
 				</header>
-				<main>
-					{this.props.children}
-				</main>
+				<main>{this.props.children}</main>
 				<footer>
 					<p>&copy; 2017</p>
-				</footer>	
+				</footer>
 			</div>
-		)
-	}
+		);
+	};
 }
 
-export default withRouter(Main)
-
+export default withRouter(Main);

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@import './normalize';
+
+body {
+	font-family: sans-serif;
+}
 
 header,
 main,

@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class NotFoundPage extends Component {
 	render() {
@@ -7,9 +7,9 @@ class NotFoundPage extends Component {
 			<div className="page error">
 				<h1>404</h1>
 				<p>Not Found</p>
-				<Link to='/'>Home</Link>
+				<Link to="/">Home</Link>
 			</div>
-		)
+		);
 	}
 }
-export default NotFoundPage
+export default NotFoundPage;

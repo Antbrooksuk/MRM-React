@@ -1,4 +1,4 @@
-## MRM React Redux
+# React Redux Starter
 
 ```sh
 $ yarn install
