@@ -3,7 +3,6 @@ var webpack = require('webpack');
 
 module.exports = {
 	entry: [
-		'babel-polyfill',
 		'react-hot-loader/patch',
 		'webpack-dev-server/client?http://localhost:8000',
 		'webpack/hot/only-dev-server',

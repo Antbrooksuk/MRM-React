@@ -6,7 +6,7 @@ var BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 	.BundleAnalyzerPlugin;
 
 module.exports = {
-	entry: ['babel-polyfill', path.resolve(__dirname, 'src', 'index.js')],
+	entry: [path.resolve(__dirname, 'src', 'index.js')],
 
 	output: {
 		path: buildPath,
