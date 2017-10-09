@@ -2,6 +2,8 @@ var webpack = require('webpack');
 var path = require('path');
 var nodeModulesPath = path.resolve(__dirname, 'node_modules');
 var buildPath = path.resolve(__dirname, 'public');
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+	.BundleAnalyzerPlugin;
 
 module.exports = {
 	entry: ['babel-polyfill', path.resolve(__dirname, 'src', 'index.js')],
@@ -11,11 +13,10 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 
-	devtool: 'cheap-module-source-map',
-
 	plugins: [
+		new BundleAnalyzerPlugin(),
 		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': '"production"'
+			'process.env': { NODE_ENV: '"production"' }
 		}),
 		new webpack.NamedModulesPlugin(),
 		new webpack.LoaderOptionsPlugin({
@@ -46,24 +47,20 @@ module.exports = {
 			{
 				test: /\.(js|jsx)$/,
 				loader: 'babel-loader',
-				exclude: /node_modules/,
-				query: {
-					presets: [
-						'react',
-						['es2015', { modules: false }],
-						'stage-0'
-					]
-				}
+				exclude: /node_modules/
 			},
 			{
 				test: /\.css$/,
 				exclude: /node_modules/,
-				loaders: ['style-loader', 'css-loader']
-			},
-			{
-				test: /\.scss$/,
-				exclude: /node_modules/,
-				loaders: ['style-loader', 'css-loader', 'sass-loader']
+				loader: [
+					{ loader: 'style-loader', options: { sourceMap: false } },
+					{
+						loader: 'css-loader',
+						options: { sourceMap: false, importLoaders: 1 }
+					},
+					{ loader: 'postcss-loader', options: { sourceMap: false } },
+					{ loader: 'sass-loader', options: { sourceMap: false } }
+				]
 			}
 		]
 	}
