@@ -41,12 +41,15 @@ module.exports = {
 			{
 				test: /\.css$/,
 				exclude: /node_modules/,
-				loaders: ['style-loader', 'css-loader']
-			},
-			{
-				test: /\.scss$/,
-				exclude: /node_modules/,
-				loaders: ['style-loader', 'css-loader', 'sass-loader']
+				loader: [
+					{ loader: 'style-loader', options: { sourceMap: true } },
+					{
+						loader: 'css-loader',
+						options: { sourceMap: true, importLoaders: 1 }
+					},
+					{ loader: 'postcss-loader', options: { sourceMap: true } },
+					{ loader: 'sass-loader', options: { sourceMap: true } }
+				]
 			}
 		]
 	},
