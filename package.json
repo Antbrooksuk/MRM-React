@@ -41,5 +41,8 @@
 	"scripts": {
 		"dev": "webpack-dev-server",
 		"build": "webpack --config webpack.prod.config.js"
+	},
+	"dependencies": {
+		"react-paginate": "^5.0.0"
 	}
 }

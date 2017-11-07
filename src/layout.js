@@ -6,7 +6,7 @@ class Main extends Component {
 
 	componentDidUpdate() {}
 
-	render = () => {
+	render() {
 		return (
 			<div id="app">
 				<header>
@@ -18,7 +18,7 @@ class Main extends Component {
 				</footer>
 			</div>
 		);
-	};
+	}
 }
 
 export default withRouter(Main);

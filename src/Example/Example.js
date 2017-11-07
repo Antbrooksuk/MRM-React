@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './Example.css';
 
 const propTypes = {
 	id: PropTypes.number.isRequired,
@@ -11,7 +12,7 @@ const defaultProps = {
 	text: 'Hello World'
 };
 
-class Link extends Component {
+class Example extends Component {
 	// Static methods
 	static methodsAreOk() {
 		return true;
@@ -39,7 +40,7 @@ class Link extends Component {
 	}
 }
 
-Link.propTypes = propTypes;
-Link.defaultProps = defaultProps;
+Example.propTypes = propTypes;
+Example.defaultProps = defaultProps;
 
-export default Link;
+export default Example;

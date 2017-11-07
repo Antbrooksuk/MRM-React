@@ -1,0 +1,25 @@
+.pagination {
+	display: inline-block;
+	padding-left: 15px;
+	padding-right: 15px;
+	li {
+		display: inline-block;
+		&.disabled {
+			opacity: 0.5;
+		}
+		&.active {
+			a {
+				background: blue;
+				color: #fff;
+			}
+		}
+		a {
+			display: block;
+			padding: 1em;
+			background: #eee;
+		}
+	}
+	.break a {
+		cursor: default;
+	}
+}

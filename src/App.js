@@ -5,9 +5,9 @@ import { Provider } from 'react-redux';
 import './Styles/Main.css';
 
 class App extends Component {
-	render = () => {
+	render() {
 		return <Provider store={store}>{AppRouter(store)}</Provider>;
-	};
+	}
 }
 
 export default App;

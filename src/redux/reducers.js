@@ -7,15 +7,14 @@ export function posts(
 	action
 ) {
 	switch (action.type) {
-		case 'FETCH_NOTES_REQUEST': {
-			return { ...state, posts: {}, fetched: false };
+		case 'FETCH_POSTS_REQUEST': {
+			return { ...state, fetched: false };
 		}
-		case 'FETCH_NOTES_SUCCESS': {
+		case 'FETCH_POSTS_SUCCESS': {
 			return { ...state, posts: action.payload, fetched: true };
 		}
-		case 'FETCH_NOTES_FAILURE': {
+		case 'FETCH_POSTS_FAILURE': {
 			return {
-				...state,
 				posts: {},
 				errored: action.payload,
 				fetched: true
