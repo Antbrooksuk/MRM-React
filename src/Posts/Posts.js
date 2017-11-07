@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Post from '../components/Post';
+import Post from '../Post';
+import './Posts.css';
 
 class Posts extends Component {
 	state = {};
@@ -8,7 +9,7 @@ class Posts extends Component {
 
 	componentWillReceiveProps(nextProps) {}
 
-	render = () => {
+	render() {
 		// Save the posts
 		var posts = this.props.posts.data,
 			postslist = [];
@@ -18,7 +19,7 @@ class Posts extends Component {
 		});
 
 		return <div className="posts">{postslist}</div>;
-	};
+	}
 }
 
 export default Posts;

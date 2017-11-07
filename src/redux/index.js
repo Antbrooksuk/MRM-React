@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import * as reducers from './reducers';
-// Users is default, rest are variables
+// No need to edit this
 export default combineReducers({
 	...reducers
 });

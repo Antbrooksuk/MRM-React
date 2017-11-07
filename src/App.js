@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import store from './store';
 import AppRouter from './router';
 import { Provider } from 'react-redux';
-import './SCSS/main.css';
+import './Styles/Main.css';
 
 class App extends Component {
 	render = () => {

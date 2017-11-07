@@ -16,7 +16,7 @@ module.exports = {
 		publicPath: '/'
 	},
 
-	devtool: 'source-map',
+	devtool: 'cheap-module-eval-source-map',
 
 	plugins: [
 		new webpack.NamedModulesPlugin(),

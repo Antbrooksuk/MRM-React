@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Import Layouts
 import MainLayout from './layout';
 // Import Pages
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
+import Home from './Home';
+import NotFound from './NotFound';
 // Create router with access to store
 const AppRouter = store => {
 	return (
