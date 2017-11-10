@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Posts from '../Components/PostsList';
-import ReactPaginate from 'react-paginate';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../Redux/actions';
 import './Posts.css';
@@ -58,21 +57,7 @@ class PostsPage extends Component {
 			);
 		}
 
-		pagination = (
-			<ReactPaginate
-				pageCount={this.state.pageCount}
-				onPageChange={this.handlePageClick}
-				containerClassName={'pagination'}
-				activeClassName={'active'}
-			/>
-		);
-
-		return (
-			<div className="home">
-				{view}
-				{pagination}
-			</div>
-		);
+		return <div className="home">{view}</div>;
 	}
 }
 

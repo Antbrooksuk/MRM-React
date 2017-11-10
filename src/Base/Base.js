@@ -4,10 +4,10 @@ import AppRouter from './router';
 import { Provider } from 'react-redux';
 import './Base.css';
 
-class App extends Component {
+class Base extends Component {
 	render() {
 		return <Provider store={store}>{AppRouter(store)}</Provider>;
 	}
 }
 
-export default App;
+export default Base;

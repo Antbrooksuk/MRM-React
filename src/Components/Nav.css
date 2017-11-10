@@ -1,4 +1,7 @@
 nav {
+	background: #fff;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 	ul {
 		margin: 0;
 		padding: 0;

@@ -1,5 +1,5 @@
 /****************
-** Global Styles
+** Base Styles
 ****************/
 
 @charset "UTF-8";
@@ -28,8 +28,9 @@ main {
 }
 
 .container {
-	width: 40em;
+	max-width: 40em;
 	margin: 0 auto;
+	padding: 0 1em;
 }
 
 footer {
