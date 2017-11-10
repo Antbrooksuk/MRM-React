@@ -1,0 +1,37 @@
+/****************
+** Global Styles
+****************/
+
+@charset "UTF-8";
+@import '../Utilities/normalize';
+
+body {
+	font-family: sans-serif;
+	background: #eee;
+	text-align: center;
+	line-height: 1.4;
+}
+
+header,
+main,
+footer {
+	padding: 1em 0;
+}
+
+header {
+	background: #fff;
+}
+
+main {
+	background: #fff;
+	text-align: left;
+}
+
+.container {
+	width: 40em;
+	margin: 0 auto;
+}
+
+footer {
+	padding: 1em 0;
+}

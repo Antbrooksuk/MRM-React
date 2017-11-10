@@ -2,8 +2,6 @@ var webpack = require('webpack');
 var path = require('path');
 var nodeModulesPath = path.resolve(__dirname, 'node_modules');
 var buildPath = path.resolve(__dirname, 'public');
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-	.BundleAnalyzerPlugin;
 
 module.exports = {
 	entry: [path.resolve(__dirname, 'src', 'index.js')],
@@ -14,9 +12,8 @@ module.exports = {
 	},
 
 	plugins: [
-		new BundleAnalyzerPlugin(),
 		new webpack.DefinePlugin({
-			'process.env': { NODE_ENV: '"production"' }
+			'process.env.NODE_ENV': '"production"'
 		}),
 		new webpack.NamedModulesPlugin(),
 		new webpack.LoaderOptionsPlugin({

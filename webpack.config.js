@@ -3,6 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
 	entry: [
+		'babel-polyfill',
 		'react-hot-loader/patch',
 		'webpack-dev-server/client?http://localhost:8000',
 		'webpack/hot/only-dev-server',
@@ -10,6 +11,7 @@ module.exports = {
 	],
 
 	output: {
+		// The file name to output
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'public'),
 		pathinfo: true,
@@ -49,9 +51,8 @@ module.exports = {
 	devServer: {
 		host: 'localhost',
 		port: 8000,
+		compress: false,
 		contentBase: path.join(__dirname, 'public'),
-		publicPath: '/',
-		openPage: '',
 		historyApiFallback: true,
 		hot: true,
 		open: true

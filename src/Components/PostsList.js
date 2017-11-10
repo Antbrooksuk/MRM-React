@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Post from '../Post';
-import './Posts.css';
+import Post from './Post';
+import './PostsList.css';
 
-class Posts extends Component {
+class PostsList extends Component {
 	state = {};
 
 	render() {
@@ -24,4 +24,4 @@ class Posts extends Component {
 	}
 }
 
-export default Posts;
+export default PostsList;

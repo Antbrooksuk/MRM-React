@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import store from './store';
+import store from '../Redux/store';
 import AppRouter from './router';
 import { Provider } from 'react-redux';
-import './Styles/Main.css';
+import './Base.css';
 
 class App extends Component {
 	render() {

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import Posts from '../Posts';
+import Posts from '../Components/PostsList';
 import ReactPaginate from 'react-paginate';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../Redux/actions';
-import './Home.css';
+import './Posts.css';
 
-class HomePage extends Component {
+class PostsPage extends Component {
 	constructor(props) {
 		super(props);
-		this.handlePageClick = this.handlePageClick.bind(this);
 		this.loadPosts = this.loadPosts.bind(this);
 	}
 
@@ -61,16 +60,9 @@ class HomePage extends Component {
 
 		pagination = (
 			<ReactPaginate
-				previousLabel={'PREV'}
-				nextLabel={'NEXT'}
-				breakLabel={<a href="">...</a>}
-				breakClassName={'break-me'}
 				pageCount={this.state.pageCount}
-				marginPagesDisplayed={2}
-				pageRangeDisplayed={5}
 				onPageChange={this.handlePageClick}
 				containerClassName={'pagination'}
-				subContainerClassName={'pages pagination'}
 				activeClassName={'active'}
 			/>
 		);
@@ -94,4 +86,4 @@ const mapStateToProps = store => ({
 	errored: store.posts.errored
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default connect(mapStateToProps, mapDispatchToProps)(PostsPage);
