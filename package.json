@@ -17,6 +17,7 @@
 		"css-loader": "^0.28.0",
 		"file-loader": "^1.1.5",
 		"node-sass": "^4.5.3",
+		"google-map-react": "^0.25.0",
 		"postcss": "^6.0.13",
 		"postcss-cssnext": "^3.0.2",
 		"postcss-import": "^11.0.0",
@@ -42,8 +43,5 @@
 	"scripts": {
 		"dev": "webpack-dev-server",
 		"build": "webpack --config webpack.prod.config.js"
-	},
-	"dependencies": {
-		"google-map-react": "^0.25.0"
 	}
 }
