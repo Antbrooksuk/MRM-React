@@ -3,8 +3,6 @@ import Post from './Post';
 import './PostsList.css';
 
 class PostsList extends Component {
-	state = {};
-
 	render() {
 		// Save the posts
 		var posts = this.props.posts,

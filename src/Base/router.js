@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Import Layouts
-import Layout from './layout';
+import DefaultLayout from '../Layouts/Default';
+import ExtraLayout from '../Layouts/Extra';
 // Import Pages
 import Home from '../Pages/Home';
 import Posts from '../Pages/Posts';
@@ -11,14 +12,43 @@ import NotFound from '../Pages/NotFound';
 const AppRouter = store => {
 	return (
 		<Router>
-			<Layout>
-				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route exact path="/posts" component={Posts} />
-					<Route exact path="/map" component={Map} />
-					<Route path="*" component={NotFound} />
-				</Switch>
-			</Layout>
+			<Switch>
+				<Route
+					exact
+					path="/"
+					render={() => (
+						<DefaultLayout>
+							<Home />
+						</DefaultLayout>
+					)}
+				/>
+				<Route
+					exact
+					path="/posts"
+					render={() => (
+						<DefaultLayout>
+							<Posts />
+						</DefaultLayout>
+					)}
+				/>
+				<Route
+					exact
+					path="/map"
+					render={() => (
+						<DefaultLayout>
+							<Map />
+						</DefaultLayout>
+					)}
+				/>
+				<Route
+					path="*"
+					render={() => (
+						<ExtraLayout>
+							<NotFound />
+						</ExtraLayout>
+					)}
+				/>
+			</Switch>
 		</Router>
 	);
 };
